@@ -1,4 +1,4 @@
-package com.marcfearby.sfgpetclinic.model;
+package com.marcfearby.model;
 
 public class Person {
 
