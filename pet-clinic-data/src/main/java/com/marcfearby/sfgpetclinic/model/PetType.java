@@ -1,6 +1,8 @@
 package com.marcfearby.sfgpetclinic.model;
 
-public class PetType {
+import java.io.Serializable;
+
+public class PetType implements Serializable {
 
     private String name;
 

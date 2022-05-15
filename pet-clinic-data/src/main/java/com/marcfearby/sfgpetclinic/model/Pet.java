@@ -1,8 +1,9 @@
 package com.marcfearby.sfgpetclinic.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Pet {
+public class Pet implements Serializable {
 
     private PetType petType;
     private Owner owner;
