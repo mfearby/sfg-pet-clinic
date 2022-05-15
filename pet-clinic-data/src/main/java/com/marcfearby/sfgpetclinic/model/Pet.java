@@ -1,4 +1,4 @@
-package com.marcfearby.model;
+package com.marcfearby.sfgpetclinic.model;
 
 import java.time.LocalDate;
 
