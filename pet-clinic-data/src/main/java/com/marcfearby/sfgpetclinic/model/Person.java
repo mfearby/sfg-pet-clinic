@@ -2,7 +2,7 @@ package com.marcfearby.sfgpetclinic.model;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {
+public class Person extends BaseEntity implements Serializable {
 
     private String firstName;
     private String lastName;

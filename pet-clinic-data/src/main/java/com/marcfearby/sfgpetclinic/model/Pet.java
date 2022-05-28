@@ -3,7 +3,7 @@ package com.marcfearby.sfgpetclinic.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Pet implements Serializable {
+public class Pet extends BaseEntity implements Serializable {
 
     private PetType petType;
     private Owner owner;
