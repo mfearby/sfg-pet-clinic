@@ -7936,7 +7936,8 @@ strong {
   height: 46px;
   display: inline-block;
   text-decoration: none;
-  padding: 0; }
+  padding: 0;
+  flex: 1; }
 
 .navbar a.navbar-brand span {
   display: block;
