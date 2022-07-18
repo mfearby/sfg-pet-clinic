@@ -61,6 +61,10 @@ public class DataLoader implements CommandLineRunner {
         owner1.setCity("Cityville");
         owner1.setTelephone("555 1234");
 
+        // Can supposedly do this with Lombok but it just puts a null in each field.
+        // TODO figure out why I get nulls with Lombok builder
+//        owner1.builder().address("1 My Street").firstName("Marc").lastName("Fearby").city("Cityville").telephone("555 1234").build();
+
         Pet pet1 = new Pet();
         pet1.setName("Peanut");
         pet1.setPetType(cat);
