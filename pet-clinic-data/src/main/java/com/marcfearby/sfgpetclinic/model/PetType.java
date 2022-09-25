@@ -1,10 +1,8 @@
 package com.marcfearby.sfgpetclinic.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
@@ -17,6 +15,18 @@ import java.io.Serializable;
 @Table(name = "types")
 public class PetType extends BaseEntity implements Serializable {
 
+    @Column(name = "name")
     private String name;
+
+    @Builder
+    public PetType(Long id, String name) {
+        super(id);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 
 }

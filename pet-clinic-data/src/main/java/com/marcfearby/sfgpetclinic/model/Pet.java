@@ -1,9 +1,6 @@
 package com.marcfearby.sfgpetclinic.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -18,6 +15,20 @@ import java.util.Set;
 @Entity
 public class Pet extends BaseEntity implements Serializable {
 
+    @Builder
+    public Pet(Long id, String name, PetType petType, Owner owner, LocalDate birthDate, Set<Visit> visits) {
+        super(id);
+        this.name = name;
+        this.petType = petType;
+        this.owner = owner;
+        this.birthDate = birthDate;
+
+        if (visits == null || visits.size() > 0 ) {
+            this.visits = visits;
+        }
+    }
+
+    @Column(name = "name")
     private String name;
 
     @ManyToOne
