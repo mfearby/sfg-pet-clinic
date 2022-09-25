@@ -1,6 +1,7 @@
 package com.marcfearby.sfgpetclinic.model;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -39,6 +40,8 @@ public class Pet extends BaseEntity implements Serializable {
     @JoinColumn(name = "owner_id")  // this table will get an owner_id field with the ID of the associated Owner entity
     private Owner owner;
 
+    @Column(name = "birth_date")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
