@@ -33,6 +33,8 @@ public class DataLoader implements CommandLineRunner {
     }
 
     private void loadData() {
+        System.out.println("Hibernate version" + org.hibernate.Version.getVersionString());
+
         Speciality radiology = new Speciality();
         radiology.setDescription("Radiology");
         Speciality savedRadiology = specialityService.save(radiology);
